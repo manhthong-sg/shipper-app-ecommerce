@@ -1,21 +1,21 @@
 import React from 'react'
-import { StyleSheet, View, Button, Text } from 'react-native'
+import { StyleSheet, Text, View ,Button} from 'react-native'
 
-const HomeScreen = ({ navigation }) => {
+const SupportScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <Button title="Click Here" onPress={() => alert('Button Clicked!')} />
-            <Text>Home Screen</Text>
+            <Text>Support Screen</Text>
         </View>
     )
 }
 
-export default HomeScreen
+export default SupportScreen
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1, 
-        alignItems: 'center', 
+        flex: 1,
+        alignItems: 'center',
         justifyContent: 'center'
-      },
+    },
 })
