@@ -1,10 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import DrawerNavigation from './navigations/DrawerNavigation';
-export default function App() {
+import Login from './screens/Login';
+import { NavigationContainer } from '@react-navigation/native';
+import NormalNavigation from './navigations/NormalNavigation';
+
+export default function App({ route, navigation }) {
+  const [isLogin, setIsLogin] = useState(false)
   return (
-      <DrawerNavigation/>
+    // <DrawerNavigation/>
+    <NavigationContainer>
+      {/* {isLogin == true ?
+        (<DrawerNavigation />)
+        :
+        (<NormalNavigation />)
+      } */}
+      <NormalNavigation/>
+    </NavigationContainer>
   );
 }
 

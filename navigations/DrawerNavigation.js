@@ -10,26 +10,27 @@ import SupportScreen from '../screens/SupportScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import BookmarksScreen from '../screens/BookmarksScreen';
 const Drawer = createDrawerNavigator();
-
-const DrawerNavigation = ({ navigation }) => {  
+const DrawerNavigation = ({ navigation }) => {
     return (
-        <NavigationContainer>
-            <Drawer.Navigator  drawerContent={props=><DrawerContent {...props}/>}>
-                <Drawer.Screen name="Home" component={HomeScreen} />
-                <Drawer.Screen name="Settings" component={SettingsScreen} />
-                <Drawer.Screen name="Profile" component={ProfileScreen} />
-                <Drawer.Screen name="Support" component={SupportScreen} />
-                <Drawer.Screen name="Bookmarks" component={BookmarksScreen} />
+        
+            
+            <Drawer.Navigator drawerContent={props => <DrawerContent {...props} />}>
+                <Drawer.Screen name="Trang chủ" component={HomeScreen} />
+                <Drawer.Screen name="Chờ xác nhận" component={SettingsScreen} />
+                <Drawer.Screen name="Đang giao" component={ProfileScreen} />
+                <Drawer.Screen name="Đã giao" component={SupportScreen} />
+                {/* <Drawer.Screen name="Bookmarks" component={BookmarksScreen} /> */}
             </Drawer.Navigator>
-        </NavigationContainer>
+
+        
     )
 }
 
 export default DrawerNavigation
 
 const styles = StyleSheet.create({
-    navigation_css:{
-        backgroundColor:'#009387'
+    navigation_css: {
+        backgroundColor: '#009387'
     }
 })
 
